@@ -22,7 +22,7 @@ RUN git clone https://aur.archlinux.org/yay.git \
   # Clean up
   && rm -rf .cache yay
 
-RUN yay -Syu --noconfirm typescript neovim nodejs-neovim python-neovim
+RUN yay -Syu --noconfirm typescript neovim ts-node nodejs-neovim python-neovim
 
 RUN echo 'alias vim=nvim' >> ~/.bashrc
 
