@@ -31,7 +31,7 @@ RUN curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 COPY --chown=$user nvimrc /home/$user/.config/nvim/init.vim
 
-# Doesn't work
 RUN nvim +PlugInstall +qall
+RUN nvim +"UpdateRemotePlugins" +qall
 
 CMD bash
